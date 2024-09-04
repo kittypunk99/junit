@@ -1,0 +1,9 @@
+\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b //IpV4 Address
+\b([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}\b //IpV6 Address
+\b([0-9A-Fa-f]{2}[.:-]){5}([0-9A-Fa-f]{2})\b //Mac Address
+\b[A-Z]{2,3}\d{2,4}\b //Flugnummer
+[-+]?\d+([.,]\d+)?\b //Zahlen
+\b(0?[1-9]|[12][0-9]|3[01])\.(0?[1-9]|1[0-2])\.(\d{2}|\d{4})?\b //Datum, kümmert  sich nicht um monatslänge
+\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b //Email
+\b(0*10*10*)*\b //Binär mit gerader Anzahl an 1
+ //Binär mit abwechselnden 0 und 1
