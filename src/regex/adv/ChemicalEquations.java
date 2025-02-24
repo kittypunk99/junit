@@ -28,7 +28,7 @@ public class ChemicalEquations {
     public static boolean isFormallyCorrect(String equation) {
         String[] sides = equation.split("->");
         if (sides.length != 2) {
-            return false;
+            return false;//fdgfssdf
         }
         Map<String, Integer> reactantsCount = countAtoms(sides[0]);
         Map<String, Integer> productsCount = countAtoms(sides[1]);
