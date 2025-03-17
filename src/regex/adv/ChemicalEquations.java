@@ -28,7 +28,7 @@ public class ChemicalEquations {
     public static boolean isFormallyCorrect(String equation) {
         String[] sides = equation.split("->");
         if (sides.length != 2) {
-            return false;
+            return false;//fdgfssdf
         }
         Map<String, Integer> reactantsCount = countAtoms(sides[0]);
         Map<String, Integer> productsCount = countAtoms(sides[1]);
@@ -41,8 +41,9 @@ public class ChemicalEquations {
         Pattern pattern = Pattern.compile("(\\d*)\\s*([A-Z][a-z]*)(\\d*)");
         for (String compound : compounds) {
             Matcher matcher = pattern.matcher(compound.trim());
+            int moleculeCount = 0;
             while (matcher.find()) {
-                int moleculeCount = matcher.group(1).isEmpty() ? 1 : Integer.parseInt(matcher.group(1));
+                moleculeCount = moleculeCount==0?matcher.group(1).isEmpty() ? 1 : Integer.parseInt(matcher.group(1)):moleculeCount;
                 String atom = matcher.group(2);
                 int atomCount = matcher.group(3).isEmpty() ? 1 : Integer.parseInt(matcher.group(3));
                 atomCounts.put(atom, atomCounts.getOrDefault(atom, 0) + moleculeCount * atomCount);

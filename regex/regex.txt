@@ -7,5 +7,3 @@
 \b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b //Email
 \b(0*10*10*)*\b //Binär mit gerader Anzahl an 1
 \b0?(10)+1?\b //Binär mit abwechselnden 0 und 1
-
-
