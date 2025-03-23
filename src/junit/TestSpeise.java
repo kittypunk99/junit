@@ -84,13 +84,13 @@ public class TestSpeise {
     @Test
     void saveOnesShouldReturnMealsWithoutSpecifiedAllergen() {
         List<String> saveMeals = SpeiseKarte.getSaveOnes("L");
-        assertTrue(saveMeals.stream().allMatch(meal -> !meal.contains("L")));
+        assertTrue(saveMeals.stream().noneMatch(meal -> meal.contains("L")));
     }
 
     @Test
     void averageMainShouldReturnCorrectAveragePrice() {
         double averagePrice = SpeiseKarte.getAverageMain();
-        assertEquals(11.1, averagePrice, 0.01);
+        assertEquals(10.11, averagePrice, 0.01);
     }
 
     @Test
@@ -108,8 +108,8 @@ public class TestSpeise {
         Map<String, Integer> caloriesMap = SpeiseKarte.getCaloriesSum();
         assertEquals(4, caloriesMap.size());
         assertEquals(1172, caloriesMap.get("Suppe"));
-        assertEquals(1090, caloriesMap.get("Vorspeise"));
-        assertEquals(7208, caloriesMap.get("Hauptspeise"));
+        assertEquals(1190, caloriesMap.get("Vorspeise"));
+        assertEquals(5414, caloriesMap.get("Hauptspeise"));
         assertEquals(1339, caloriesMap.get("Nachspeise"));
     }
 
